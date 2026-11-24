@@ -3,11 +3,11 @@
 
 Writes the entry text to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
 
-The classic excuse sharpened: production as the machine's evil twin that never got the update, the config, or the memo.
+The excuse flipped around: the developer is only the matchmaker, and the fight between code and production is not their problem.
 """
 import os
 
-ENTRY = "It worked on my machine — production is just my machine's evil twin that never got the update, the config, or the memo."
+ENTRY = "The code didn't break in production; production broke in code. I merely introduced them and left before the argument started."
 
 
 def main() -> None:

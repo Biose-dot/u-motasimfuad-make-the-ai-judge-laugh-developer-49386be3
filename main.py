@@ -7,7 +7,7 @@ The excuse flipped around: the developer is only the matchmaker, and the fight b
 """
 import os
 
-ENTRY = "The code didn't break in production; production broke in code. I only introduced them and left before the argument began."
+ENTRY = "The code didn't break in production; production broke in code. I merely introduced them and left before the argument started."
 
 
 def main() -> None:

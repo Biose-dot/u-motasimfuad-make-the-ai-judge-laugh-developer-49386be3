@@ -1,23 +1,19 @@
-#!/usr/bin/env python3
-"""Make the AI Judge Laugh: Developer Excuses — make.fun entry.
+"""Writes the bounty entry text to entry.txt.
 
-Writes the entry text to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
-
-The excuse flipped around: the developer is only the matchmaker, and the fight between code and production is not their problem.
+The output directory comes from MAKEFUN_OUTPUT_DIR (default /output).
+The entry is written exactly as-is, with no trailing newline.
 """
+
 import os
 
-ENTRY = "The code didn't break in production; production broke in code. I merely introduced them and left before the argument started."
+ENTRY = "It worked on my machine, which is the only machine that matters, and frankly the server should feel honored to run my code at all."
 
-
-def main() -> None:
+def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
-    path = os.path.join(out_dir, "entry.txt")
-    with open(path, "w", encoding="utf-8") as f:
+    entry_path = os.path.join(out_dir, "entry.txt")
+    with open(entry_path, "w", encoding="utf-8") as f:
         f.write(ENTRY)
-    print(f"wrote {len(ENTRY)} chars to {path}")
-
 
 if __name__ == "__main__":
     main()
